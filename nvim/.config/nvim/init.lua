@@ -12,8 +12,10 @@ opt.softtabstop = 2
 opt.expandtab = true
 require("lazy-bootstrap")
 require("keymaps")
+require("theme")
 opt.splitright = true
 opt.splitbelow = true
 opt.clipboard = 'unnamedplus'
 opt.completeopt = 'menuone,noselect'
+opt.relativenumber = true
 
