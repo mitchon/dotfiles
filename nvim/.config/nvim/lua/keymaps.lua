@@ -1,12 +1,7 @@
 local map = vim.keymap.set
 local nvimTreeApi = require('nvim-tree.api')
-local telescopeBuiltin = require('telescope.builtin')
 
-map('n', '<leader>e', nvimTreeApi.tree.toggle, {noremap = true, silent = true})
-map('n', '<leader>ff', telescopeBuiltin.find_files, {})
-map('n', '<leader>fg', telescopeBuiltin.live_grep, {})
-map('n', '<leader>fb', telescopeBuiltin.buffers, {})
-map('n', '<leader>fh', telescopeBuiltin.help_tags, {})
+--map('n', '<leader>e', nvimTreeApi.tree.toggle, {noremap = true, silent = true})
 
 map('n', '<leader>t', ":term<CR>", {noremap = true, silent = true})
 map('n', '<leader>c', ":Themery<CR>", {noremap = true, silent = true})
