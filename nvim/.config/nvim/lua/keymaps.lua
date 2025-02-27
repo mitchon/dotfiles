@@ -1,9 +1,5 @@
 local map = vim.keymap.set
-local nvimTreeApi = require('nvim-tree.api')
 
---map('n', '<leader>e', nvimTreeApi.tree.toggle, {noremap = true, silent = true})
-
-map('n', '<leader>t', ":term<CR>", {noremap = true, silent = true})
 map('n', '<leader>c', ":Themery<CR>", {noremap = true, silent = true})
 map('n', '<C-k>', "<C-w><up>")
 map('n', '<C-j>', "<C-w><down>")
