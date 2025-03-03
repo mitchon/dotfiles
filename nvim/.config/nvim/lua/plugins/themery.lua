@@ -14,7 +14,6 @@ return {
                     "kanagawa-dragon",
                     "kanagawa-lotus",
                 },
-                themeConfigFile = "~/.config/nvim/lua/theme.lua",
                 livePreview = true
             })
         end
