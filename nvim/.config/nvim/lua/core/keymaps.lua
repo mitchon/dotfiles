@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 
+map('n', '<leader>e', ":NvimTreeToggle<CR>", {silent = true})
 map('n', '<leader>c', ":Themery<CR>", {noremap = true, silent = true})
 map('n', '<C-k>', "<C-w><up>")
 map('n', '<C-j>', "<C-w><down>")

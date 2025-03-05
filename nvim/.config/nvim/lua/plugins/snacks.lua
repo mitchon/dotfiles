@@ -3,12 +3,14 @@ return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      { "echasnovski/mini.icons", version = '*' }
+    },
     opts = {
       bigfile = { enabled = true },
       dashboard = { enabled = true },
-      explorer = { enabled = true },
       gitbrowse = { enabled = true },
-      image = { enabled = true },
       indent = { enabled = true },
       input = { enabled = true },
       lazygit = { enabled = true },
@@ -19,7 +21,6 @@ return {
     keys = {
       { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
       { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
-      { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
       { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
 
       { "<c-\\>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
