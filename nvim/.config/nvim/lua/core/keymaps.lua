@@ -1,18 +1,22 @@
 local map = vim.keymap.set
 local nvimTreeApi = require('nvim-tree.api')
 local telescopeBuiltin = require('telescope.builtin')
+local term_map = require('terminal.mappings')
 
-map('n', '<leader>e', nvimTreeApi.tree.toggle, {noremap = true, silent = true})
-map('n', '<leader>ff', telescopeBuiltin.find_files, {})
-map('n', '<leader>fg', telescopeBuiltin.live_grep, {})
-map('n', '<leader>fb', telescopeBuiltin.buffers, {})
-map('n', '<leader>fh', telescopeBuiltin.help_tags, {})
+map('n', '<leader>e', nvimTreeApi.tree.toggle, {noremap = true, silent = true, desc = 'toggle tree'})
 
-map('n', '<leader>c', ":Themery<CR>", {noremap = true, silent = true})
-map('n', '<C-k>', "<C-w><up>")
-map('n', '<C-j>', "<C-w><down>")
-map('n', '<C-h>', "<C-w><left>")
-map('n', '<C-l>', "<C-w><right>")
+map('n', '<leader>ff', telescopeBuiltin.find_files, {desc = 'find files'})
+map('n', '<leader>fg', telescopeBuiltin.live_grep, {desc = 'grep'})
+map('n', '<leader>fb', telescopeBuiltin.buffers, {desc = 'find buffers'})
+map('n', '<leader>fh', telescopeBuiltin.help_tags, {desc = 'help tags'})
+
+map('n', '<leader>to', term_map.toggle, {desc = 'toggle terminal'})
+map('n', '<leader>tr', term_map.run, {desc = 'run command in terminal'})
+map('n', '<leader>tk', term_map.kill, {desc = 'kill terminal'})
+map('n', '<leader>t]', term_map.cycle_next, {desc = 'cycle next terminal'})
+map('n', '<leader>t[', term_map.cycle_prev, {desc = 'cycle previous terminal'})
+
+map('n', '<leader>c', ":Themery<CR>", {noremap = true, silent = true, desc = 'open themery'})
 
 map('n', '<A-h>', ":BufferPrevious<CR>", {silent = true})
 map('n', '<A-l>', ":BufferNext<CR>", {silent = true})
