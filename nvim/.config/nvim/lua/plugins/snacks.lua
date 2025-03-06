@@ -10,12 +10,9 @@ return {
     opts = {
       dashboard = { enabled = true },
       gitbrowse = { enabled = true },
-      lazygit = { enabled = true },
-      notifier = { enabled = true },
     },
     keys = {
       { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
-      { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     }
   }
 }

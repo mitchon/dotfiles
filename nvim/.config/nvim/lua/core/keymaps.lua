@@ -16,6 +16,8 @@ map('n', '<leader>tk', term_map.kill, {desc = 'kill terminal'})
 map('n', '<leader>t]', term_map.cycle_next, {desc = 'cycle next terminal'})
 map('n', '<leader>t[', term_map.cycle_prev, {desc = 'cycle previous terminal'})
 
+map('n', '<leader>gl', ':LazyGit<CR>', {noremap = true, silent = true, desc = 'lazygit'})
+
 map('n', '<leader>c', ":Themery<CR>", {noremap = true, silent = true, desc = 'open themery'})
 
 map('n', '<A-h>', ":BufferPrevious<CR>", {silent = true})
