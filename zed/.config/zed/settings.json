@@ -1,0 +1,77 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // "vim_mode": true,
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "relative_line_numbers": true,
+  "base_keymap": "JetBrains",
+  "ui_font_size": 16,
+  "ui_font_family": "FiraCode Nerd Font",
+  "buffer_font_size": 15,
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_features": {
+    "calt": true
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Kanagawa Wave",
+    "dark": "Kanagawa Wave"
+  },
+  "auto_install_extensions": {
+    "git-firefly": true,
+    "html": true,
+    "dockerfile": true,
+    "docker-compose": true,
+    "make": true,
+    "zig": true,
+    "lua": true,
+    "env": true,
+    "basher": true,
+    "java": true,
+    "kotlin": true,
+    "sql": true,
+    "xml": true,
+    "catppuccin": true,
+    "intellij-newui-theme": true,
+    "kanagawa-themes": true
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "load_direnv": "direct",
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "terminal": {
+    "scrollbar": {
+      "show": "always"
+    }
+  },
+  "project_panel": {
+    "default_width": 280
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true
+  },
+  "languages": {
+    "Zig": {
+      "enable_language_server": true,
+      "language_servers": ["zls"]
+    }
+  }
+}
