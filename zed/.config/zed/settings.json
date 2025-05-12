@@ -1,7 +1,7 @@
 {
   "theme": {
     "mode": "system",
-    "light": "Kanagawa Wave",
+    "light": "Zedokai Light (Filter Sun)",
     "dark": "Kanagawa Dragon"
   },
   "icon_theme": "Charmed Icons",
@@ -60,6 +60,7 @@
   },
   "auto_install_extensions": {
     "kanagawa-themes": true,
+    "zedokai": true,
     "charmed-icons": true,
     "proto": true,
     "git-firefly": true,
