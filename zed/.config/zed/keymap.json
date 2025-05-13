@@ -5,13 +5,15 @@
       "alt-g": [
         "task::Spawn",
         { "task_name": "lazygit", "reveal_target": "center" }
+      ],
+      "alt-d": [
+        "task::Spawn",
+        { "task_name": "lazydocker", "reveal_target": "center" }
+      ],
+      "alt-s": [
+        "task::Spawn",
+        { "task_name": "lazysql", "reveal_target": "center" }
       ]
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
     }
   }
 ]
