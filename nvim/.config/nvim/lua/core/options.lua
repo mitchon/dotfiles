@@ -10,4 +10,5 @@ opt.splitbelow = true
 opt.clipboard:append('unnamedplus')
 opt.completeopt = 'menuone,noselect'
 opt.relativenumber = true
+opt.number = true
 
