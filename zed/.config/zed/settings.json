@@ -77,7 +77,8 @@
     "sql": true,
     "xml": true,
     "ansible": true,
-    "jinja2": true
+    "jinja2": true,
+    "go": true
   },
   "file_types": {
     "Ansible": [
@@ -103,6 +104,10 @@
     "Zig": {
       "enable_language_server": true,
       "language_servers": ["zls"]
+    },
+    "Go": {
+      "enable_language_server": true,
+      "language_servers": ["gopls"]
     }
   },
   "lsp": {
@@ -117,6 +122,9 @@
           }
         }
       }
+    },
+    "gopls": {
+      
     }
   },
   "ssh_connections": [
