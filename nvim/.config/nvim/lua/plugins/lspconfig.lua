@@ -10,6 +10,7 @@ return {
           "jdtls",
           "clangd",
           "marksman",
+          "gopls",
         }
       })
 
