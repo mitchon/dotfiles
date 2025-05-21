@@ -17,6 +17,7 @@ map('n', '<leader>t]', term_map.cycle_next, {desc = 'cycle next terminal'})
 map('n', '<leader>t[', term_map.cycle_prev, {desc = 'cycle previous terminal'})
 
 map('n', '<leader>gl', ':LazyGit<CR>', {noremap = true, silent = true, desc = 'lazygit'})
+map('n', '<leader>gb', ':Gitsigns blame<CR>', {noremap = true, silent = true, desc = 'git blame'})
 
 map('n', '<leader>c', ":Themery<CR>", {noremap = true, silent = true, desc = 'open themery'})
 
@@ -38,5 +39,24 @@ map('n', '<A-c>', ":BufferClose<CR>", {silent = true})
 map('n', '<A-s-c>', ":BufferRestore<CR>", {silent = true})
 map('n', '<A-p>', ":BufferPin<CR>", {silent = true})
 
+map('n', '<C-k>', ":wincmd k<CR>", {silent = true})
+map('n', '<C-j>', ":wincmd j<CR>", {silent = true})
+map('n', '<C-h>', ":wincmd h<CR>", {silent = true})
+map('n', '<C-l>', ":wincmd l<CR>", {silent = true})
 
-
+map('n', '<leader>lh', '<cmd>lua vim.lsp.buf.hover()<CR>', {desc = "hover"})
+map('n', '<leader>ld', '<cmd>lua vim.lsp.buf.definition()<CR>', {desc = "definition"})
+map('n', '<leader>lD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {desc = "declaration"})
+map('n', '<leader>li', '<cmd>lua vim.lsp.buf.implementation()<CR>', {desc = "implementation"})
+map('n', '<leader>lt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {desc = "type definition"})
+map('n', '<leader>lR', '<cmd>lua vim.lsp.buf.references()<CR>', {desc = "references"})
+map('n', '<leader>ls', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {desc = "signature Help"})
+map('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<CR>', {desc = "rename"})
+map('n', '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<CR>', {desc = "format"})
+map('v', '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<CR>', {desc = "format"})
+map('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<CR>', {desc = "code action"})
+map('n', '<leader>ll', '<cmd>lua vim.diagnostic.open_float()<CR>', {desc = "open float"})
+map('n', '<leader>lp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', {desc = "go to prev"})
+map('n', '<leader>ln', '<cmd>lua vim.diagnostic.goto_next()<CR>', {desc = "go to next"})
+map('n', '<leader>lS', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', {desc = "document symbol"})
+map('i', '<C-Space>', '<cmd>lua vim.lsp.buf.completion()<CR>', {desc = "completion"})

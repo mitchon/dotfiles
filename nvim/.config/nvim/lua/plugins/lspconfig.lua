@@ -1,7 +1,11 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    dependencies = { 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim' },
+    dependencies = {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'j-hui/fidget.nvim',
+    },
     config = function()
       require('mason').setup()
       require('mason-lspconfig').setup({
@@ -15,7 +19,7 @@ return {
       })
 
       local lspconfig = require('lspconfig')
-      --local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lsp_attach = function(client, bufnr)
       end
 
@@ -23,7 +27,7 @@ return {
         function(server_name)
           lspconfig[server_name].setup({
             on_attach = lsp_attach,
-            --capabilities = lsp_capabilities,
+            capabilities = lsp_capabilities,
           })
         end
       })
@@ -37,6 +41,13 @@ return {
           },
         },
       }
+
+      local open_floating_preview = vim.lsp.util.open_floating_preview
+      function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+        opts = opts or {}
+        opts.border = opts.border or "rounded" -- Set border to rounded
+        return open_floating_preview(contents, syntax, opts, ...)
+      end
     end
   }
 }
