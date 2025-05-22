@@ -42,6 +42,21 @@ return {
         },
       }
 
+      require('lspconfig.configs').kotlin_ls = {
+        default_config = {
+          cmd = vim.lsp.rpc.connect('127.0.0.1', tonumber(9999)),
+          single_file_support = true,
+          filetypes = { "kotlin" },
+          root_markers = { "build.gradle", "build.gradle.kts", "pom.xml" };
+          root_dir = function(fname)
+              return lspconfig.util.find_git_ancestor(fname)
+          end;
+          settings = {};
+        };
+      }
+
+      lspconfig.kotlin_ls.setup{}
+
       local open_floating_preview = vim.lsp.util.open_floating_preview
       function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
         opts = opts or {}
