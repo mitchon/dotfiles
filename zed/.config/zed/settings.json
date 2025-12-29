@@ -4,31 +4,37 @@
     "light": "Zedokai Light (Filter Sun)",
     "dark": "Kanagawa Dragon"
   },
-  "icon_theme": "Charmed Icons",
+  "icon_theme": "Soft Charmed Icons",
   "base_keymap": "VSCode",
   "features": {
     "edit_prediction_provider": "zed"
+  },
+  "project_panel": {
+    "hide_hidden": false,
+    "hide_gitignore": false,
+    "hide_root": false,
+    "hide_": false
   },
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_fallbacks": null,
   "buffer_font_features": {
     "calt": true
   },
-  "buffer_font_size": 12.0,
+  "buffer_font_size": 14.0,
   "buffer_font_weight": 400,
   "buffer_line_height": "comfortable",
   "ui_font_family": "FiraCode Nerd Font",
   "ui_font_weight": 400,
   "ui_font_size": 15,
-  "agent_font_size": 15,
-  "cursor_blink": false,
-  "cursor_shape": "block",
+  "agent_ui_font_size": 15,
+  "cursor_blink": true,
+  "cursor_shape": "bar",
   "vim_mode": false,
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": true
   },
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "git_panel": {
     "fallback_branch_name": "master"
   },
@@ -116,7 +122,7 @@
         "yaml": {
           "schemas": {
             "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/inventory.json": [
-              "./inventory/*.yaml",
+              "./inventory/*.yml",
               "hosts.yml"
             ]
           }
@@ -126,23 +132,5 @@
     "gopls": {
       
     }
-  },
-  "ssh_connections": [
-    {
-      "host": "amsterdam",
-      "projects": [
-        {
-          "paths": ["/root"]
-        }
-      ]
-    },
-    {
-      "host": "moscow",
-      "projects": [
-        {
-          "paths": ["/root"]
-        }
-      ]
-    }
-  ]
+  }
 }
