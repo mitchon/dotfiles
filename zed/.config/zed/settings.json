@@ -1,73 +1,57 @@
 {
   "theme": {
-    "mode": "system",
-    "light": "Zedokai Light (Filter Sun)",
-    "dark": "Kanagawa Dragon"
+    "mode": "dark",
+    "light": "Gruvbox Light Soft",
+    "dark": "Gruvbox Dark Soft",
   },
-  "icon_theme": "Soft Charmed Icons",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark",
+  },
   "base_keymap": "VSCode",
-  "features": {
-    "edit_prediction_provider": "zed"
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "ui_font_family": "FiraCode Nerd Font Mono",
+  "relative_line_numbers": "enabled",
+  "title_bar": {
+    "show_branch_icon": true,
   },
   "project_panel": {
-    "hide_hidden": false,
-    "hide_gitignore": false,
-    "hide_root": false,
-    "hide_": false
+    "auto_fold_dirs": false,
   },
-  "buffer_font_family": "FiraCode Nerd Font Mono",
-  "buffer_font_fallbacks": null,
-  "buffer_font_features": {
-    "calt": true
-  },
-  "buffer_font_size": 14.0,
-  "buffer_font_weight": 400,
-  "buffer_line_height": "comfortable",
-  "ui_font_family": "FiraCode Nerd Font",
-  "ui_font_weight": 400,
-  "ui_font_size": 15,
-  "agent_ui_font_size": 15,
-  "cursor_blink": true,
-  "cursor_shape": "bar",
-  "vim_mode": false,
-  "toolbar": {
-    "breadcrumbs": true,
-    "quick_actions": true
-  },
-  "relative_line_numbers": "enabled",
   "git_panel": {
-    "fallback_branch_name": "master"
+    "fallback_branch_name": "master",
   },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
-    }
+      "milliseconds": 1000,
+    },
+  },
+  "drag_and_drop_selection": {
+    "delay": 0,
   },
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "tabs": {
     "git_status": true,
     "file_icons": true,
     "show_close_button": "always",
-    "show_diagnostics": "all"
+    "show_diagnostics": "all",
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
-  "diagnostics": {
-    "inline": {
-      "enabled": true
-    }
-  },
+  // "diagnostics": {
+  //   "inline": {
+  //     "enabled": true,
+  //   },
+  // },
   "terminal": {
-    "line_height": "standard"
+    "line_height": "standard",
   },
   "auto_install_extensions": {
-    "kanagawa-themes": true,
-    "zedokai": true,
-    "charmed-icons": true,
     "proto": true,
     "git-firefly": true,
     "html": true,
@@ -84,7 +68,8 @@
     "xml": true,
     "ansible": true,
     "jinja2": true,
-    "go": true
+    "go": true,
+    "colored-zed-icons-theme": true,
   },
   "file_types": {
     "Ansible": [
@@ -103,18 +88,19 @@
       "**/playbooks/*.yaml",
       "**/playbooks/*.yml",
       "**playbook*.yaml",
-      "**playbook*.yml"
-    ]
+      "**playbook*.yml",
+    ],
   },
+  "colorize_brackets": true,
   "languages": {
     "Zig": {
       "enable_language_server": true,
-      "language_servers": ["zls"]
+      "language_servers": ["zls"],
     },
     "Go": {
       "enable_language_server": true,
-      "language_servers": ["gopls"]
-    }
+      "language_servers": ["gopls"],
+    },
   },
   "lsp": {
     "yaml-language-server": {
@@ -123,14 +109,19 @@
           "schemas": {
             "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/inventory.json": [
               "./inventory/*.yml",
-              "hosts.yml"
-            ]
-          }
-        }
-      }
+              "./inventory/*.yaml",
+              "hosts.yml",
+              "hosts.yaml",
+            ],
+          },
+        },
+      },
     },
-    "gopls": {
-      
-    }
-  }
+    "gopls": {},
+  },
+  // "disable_ai": true,
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "proxy": "http://127.0.0.1:10808",
 }
