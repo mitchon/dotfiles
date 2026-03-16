@@ -9,6 +9,12 @@
       "right": 0
     }
   },
+  "display": {
+    "color": {
+      "keys": "blue",
+      "title": "blue"
+    }
+  },
   "modules": [
     "title",
     "separator",
@@ -19,8 +25,8 @@
     "packages",
     "shell",
     "display",
-    //"de",
-    //"wm",
+    "de",
+    "wm",
     //"wmtheme",
     //"theme",
     //"icons",
@@ -33,10 +39,10 @@
     "memory",
     "swap",
     "disk",
-    "localip",
-    "battery",
-    "poweradapter",
-    "locale",
+    //"localip",
+    //"battery",
+    //"poweradapter",
+    //"locale",
     "break",
     "colors"
   ]
