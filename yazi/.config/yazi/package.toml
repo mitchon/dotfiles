@@ -1,7 +1,9 @@
-[plugin]
-deps = []
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "1962818"
+hash = "26db011a778f261d730d4f5f8bf24b3f"
 
 [[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "d98f0c3"
-hash = "cada780385f75abbcfbf5343256b441"
+use = "bennyyip/gruvbox-dark"
+rev = "619fdc5"
+hash = "4ce83c1c8be0616a1c7dc22c04b1380f"
