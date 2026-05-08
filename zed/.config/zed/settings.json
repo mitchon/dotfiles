@@ -49,7 +49,6 @@
   //   },
   // },
   "terminal": {
-    "flexible": true,
     "line_height": "standard",
   },
   "auto_install_extensions": {
@@ -72,6 +71,7 @@
     "go": true,
     "colored-zed-icons-theme": true,
     "svelte": true,
+    "nix": true
   },
   "file_types": {
     "Ansible": [
