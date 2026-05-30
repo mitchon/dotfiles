@@ -13,10 +13,12 @@
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "ui_font_family": "FiraCode Nerd Font Mono",
   "relative_line_numbers": "enabled",
+  "window_decorations": "server",
   "title_bar": {
-    "show_branch_icon": true,
+    "show_branch_status_icon": true,
   },
   "project_panel": {
+    "dock": "left",
     "auto_fold_dirs": false,
   },
   "git_panel": {
@@ -71,7 +73,8 @@
     "go": true,
     "colored-zed-icons-theme": true,
     "svelte": true,
-    "nix": true
+    "nix": true,
+    "opentofu": true
   },
   "file_types": {
     "Ansible": [
@@ -160,5 +163,11 @@
   "edit_predictions": {
     "provider": "zed",
   },
-  "proxy": "http://127.0.0.1:10808",
+  // "proxy": "http://127.0.0.1:10808",
+  "ssh_connections": [
+    {
+      "host": "riga01.otterchanx.ru",
+      "username": "root"
+    }
+  ]
 }
