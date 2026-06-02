@@ -1,4 +1,5 @@
 {
+  "cli_default_open_behavior": "existing_window",
   "theme": {
     "mode": "system",
     "light": "Gruvbox Light Soft",
@@ -41,6 +42,7 @@
     "show_close_button": "always",
     "show_diagnostics": "all",
   },
+  "ensure_final_newline_on_save": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
