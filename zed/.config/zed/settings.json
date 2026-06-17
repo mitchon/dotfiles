@@ -1,5 +1,16 @@
 {
   "cli_default_open_behavior": "existing_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "theme": {
     "mode": "system",
     "light": "Gruvbox Light Soft",
@@ -23,6 +34,7 @@
     "auto_fold_dirs": false,
   },
   "git_panel": {
+    "dock": "left",
     "fallback_branch_name": "master",
   },
   "autosave": {
@@ -33,6 +45,8 @@
   "drag_and_drop_selection": {
     "delay": 0,
   },
+  "show_wrap_guides": true,
+  "wrap_guides": [120],
   "tab_bar": {
     "show_nav_history_buttons": false,
   },
@@ -76,7 +90,9 @@
     "colored-zed-icons-theme": true,
     "svelte": true,
     "nix": true,
-    "opentofu": true
+    "opentofu": true,
+    "rust": true,
+    "toml": true
   },
   "file_types": {
     "Ansible": [
@@ -135,6 +151,12 @@
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
+    },
+    "Nix": {
+      "language_servers": [ "nil", "!nixd" ]
+    },
+    "Rust": {
+      "language_servers": [ "rust-analyzer" ]
     }
   },
   "lsp": {
@@ -159,17 +181,19 @@
           "rules": ["import/order"]
         }
       }
-    }
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "rustfmt": {
+          "analyzerTargetDir": true,
+          "extraArgs": ["+nightly"]
+        }
+      }
+    },
   },
-  // "disable_ai": true,
+  "disable_ai": true,
   "edit_predictions": {
     "provider": "zed",
   },
-  // "proxy": "http://127.0.0.1:10808",
-  "ssh_connections": [
-    {
-      "host": "riga01.otterchanx.ru",
-      "username": "root"
-    }
-  ]
+  "proxy": "http://127.0.0.1:10808",
 }
